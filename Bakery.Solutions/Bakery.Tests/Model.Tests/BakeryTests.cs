@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Bakery.Donut;
 using Bakery.Bread;
 using Bakery.Pastry;
 
@@ -41,6 +42,7 @@ namespace Bakery.Tests
             int donutAmount = 12;
             int shouldCost = 10;
             Donuts boughDonuts = new Donuts();
+            boughDonuts.DonutCost(donutAmount);
             Assert.AreEqual(shouldCost, boughDonuts.DonutPrice);
         }
     }
