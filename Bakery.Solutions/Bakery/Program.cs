@@ -1,6 +1,7 @@
 using System;
 using Bakery.Bread;
 using Bakery.Pastry;
+using Bakery.Donut;
 
 namespace Bakery
 {
@@ -24,7 +25,7 @@ namespace Bakery
             Console.WriteLine("----------------------------------");
             Console.WriteLine("Buy two loaves of bread and get one free!");
             Console.WriteLine("We also offer 3 pastries for $5");
-            Console.WriteLine("A dozen donuts is only $10!")
+            Console.WriteLine("A dozen donuts is only $10!");
             Console.WriteLine("Single Loaves are $5 each, single donuts and pastries are $2!");
             Console.WriteLine("-----------------------------------");
         }
