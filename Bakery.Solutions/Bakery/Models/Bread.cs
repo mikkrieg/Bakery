@@ -6,7 +6,10 @@ namespace Bakery.Bread
 
         public int BreadCost(int numberOfLoaves)
         {
-            numberofDeals = (numberOfLoaves / 3);
+            int numberOfDeals = (numberOfLoaves / 3);
+            int numberOfSingleLoaves = (numberOfLoaves % 3);
+            BreadPrice = (numberOfDeals * 10) + (numberOfSingleLoaves * 5);
+            return BreadPrice;
         }
     }
 }

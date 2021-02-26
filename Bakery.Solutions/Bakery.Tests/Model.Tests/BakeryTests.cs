@@ -11,10 +11,10 @@ namespace Bakery.Tests
         [TestMethod]
         public void BreadCost_SetsPriceOfBread_Int()
         {
-            int bread = 5;
+            int breadAmount = 5;
             int shouldCost = 20;
             Loaves boughtBread = new Loaves();
-            int result = boughtBread.BreadCost(bread);
+            int result = boughtBread.BreadCost(breadAmount);
             Assert.AreEqual(shouldCost, result);
         }
     }
