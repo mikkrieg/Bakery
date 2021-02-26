@@ -9,9 +9,7 @@ namespace Bakery
         public static void Main()
         {
             Greeting();
-            GatherInputs();
-
-            
+            OutputPrice();
         }
 
         public void Greeting()
@@ -22,31 +20,28 @@ namespace Bakery
             Console.WriteLine("Single Loaves are $5 each and single pastries are $2 each!");
         }
 
-        public int GatherInputs()
-        {
-            Console.WriteLine("How many loaves of bread would you like?");
-            int loavesOfBread = int.Parse(Console.ReadLine());
-            Console.WriteLine("How many pastries would you like?");
-            int amountOfPastries = int.Parse(Console.ReadLine());
-            CallCostMethods(loavesOfBread, amountOfPastries);
-        }
-
-        public void CallBreadCost(int loavesOfBread)
+        public int CallBreadCost(int loavesOfBread)
         {
             Loaves bread = new Loaves();
-            Pastries pastry = new Pastries();
-            bread.BreadCost(loavesOfBread);
-            pastry.PastryCost(amountOfPastries);
-        }
-
-        public void CallPastryCost(int amountOfPastries)
-        {
+            Console.WriteLine("How many loaves of bread would you like?");
+            int loavesOfBread = int.Parse(Console.ReadLine());
+            int totalBreadCost = bread.BreadCost(loavesOfBread);
+            return totalBreadCost;
             
         }
 
-        public void OutputPrice()
+        public int CallPastryCost(int amountOfPastries)
         {
-            Console.WriteLine("Your total will be: $" + (bread.BreadPrice + pastry.PastryPrice));
+            Pastries pastry = new Pastries();
+            Console.WriteLine("How many pastries would you like?");
+            int amountOfPastries = int.Parse(Console.ReadLine());
+            int totalPastryCost = pastry.PastryCost(amountOfPastries);
+            return totalPastryCost;
+        }
+
+        public void OutputPrice(int totalB)
+        {
+            Console.WriteLine("Your total will be: $" + ( + pastry.PastryPrice));
             Console.WriteLine("Thank you for your purchase!");
         }
     }
