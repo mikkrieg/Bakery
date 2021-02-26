@@ -10,6 +10,7 @@ namespace Bakery
         {
             Greeting();
             GatherInputs();
+
             
         }
 
@@ -21,7 +22,7 @@ namespace Bakery
             Console.WriteLine("Single Loaves are $5 each and single pastries are $2 each!");
         }
 
-        public void GatherInputs()
+        public int GatherInputs()
         {
             Console.WriteLine("How many loaves of bread would you like?");
             int loavesOfBread = int.Parse(Console.ReadLine());
@@ -30,10 +31,17 @@ namespace Bakery
             CallCostMethods(loavesOfBread, amountOfPastries);
         }
 
-        public void CallCostMethods(int loavesOfBread, int amountOfPastries)
+        public void CallBreadCost(int loavesOfBread)
         {
+            Loaves bread = new Loaves();
+            Pastries pastry = new Pastries();
             bread.BreadCost(loavesOfBread);
             pastry.PastryCost(amountOfPastries);
+        }
+
+        public void CallPastryCost(int amountOfPastries)
+        {
+            
         }
 
         public void OutputPrice()
