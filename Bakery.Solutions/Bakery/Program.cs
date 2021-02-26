@@ -8,8 +8,11 @@ namespace Bakery
     {
         public static void Main()
         {
-            Greeting();
-            OutputPrice();
+            Program myBakery = new Program();
+            myBakery.Greeting();
+            int costOfBread = myBakery.CallBreadCost();
+            int costOfPastries = myBakery.CallPastryCost();
+            myBakery.OutputPrice(costOfBread, costOfPastries);
         }
 
         public void Greeting()
@@ -20,28 +23,32 @@ namespace Bakery
             Console.WriteLine("Single Loaves are $5 each and single pastries are $2 each!");
         }
 
-        public int CallBreadCost(int loavesOfBread)
+        public int CallBreadCost()
         {
             Loaves bread = new Loaves();
             Console.WriteLine("How many loaves of bread would you like?");
             int loavesOfBread = int.Parse(Console.ReadLine());
-            int totalBreadCost = bread.BreadCost(loavesOfBread);
+            Console.WriteLine("Sounds Good! " + loavesOfBread + " loaves of bread inbound!");
+            bread.BreadCost(loavesOfBread);
+            int totalBreadCost = bread.BreadPrice;
             return totalBreadCost;
             
         }
 
-        public int CallPastryCost(int amountOfPastries)
+        public int CallPastryCost()
         {
             Pastries pastry = new Pastries();
             Console.WriteLine("How many pastries would you like?");
-            int amountOfPastries = int.Parse(Console.ReadLine());
-            int totalPastryCost = pastry.PastryCost(amountOfPastries);
+            int pastryAmount = int.Parse(Console.ReadLine());
+            Console.WriteLine("Great! " + pastryAmount + " pastries coming right up!");
+            pastry.PastryCost(pastryAmount);
+            int totalPastryCost = pastry.PastryPrice;
             return totalPastryCost;
         }
 
-        public void OutputPrice(int totalB)
+        public void OutputPrice(int totalBread, int totalPastry)
         {
-            Console.WriteLine("Your total will be: $" + ( + pastry.PastryPrice));
+            Console.WriteLine("Your total will be: $" + ( totalBread + totalPastry));
             Console.WriteLine("Thank you for your purchase!");
         }
     }
