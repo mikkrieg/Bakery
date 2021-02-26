@@ -18,13 +18,14 @@ namespace Bakery
         public void Greeting()
         {
             Console.WriteLine("----------------------------------");
-            Console.WriteLine("Hello! Welcome to Mikey's Bakery! We have loaves of bread and pastries for sale!");
+            Console.WriteLine("Hello! Welcome to Mikey's Bakery! We have loaves of bread, pastries and Donuts for sale!");
             Console.WriteLine("----------------------------------");
             Console.WriteLine("Today we have some specials deals!");
             Console.WriteLine("----------------------------------");
-            Console.WriteLine("Buy two loaves of bread and get one free! We also offer 3 pastries for $5");
-            Console.WriteLine("----------------------------------");
-            Console.WriteLine("Single Loaves are $5 each and single pastries are $2 each!");
+            Console.WriteLine("Buy two loaves of bread and get one free!");
+            Console.WriteLine("We also offer 3 pastries for $5");
+            Console.WriteLine("A dozen donuts is only $10!")
+            Console.WriteLine("Single Loaves are $5 each, single donuts and pastries are $2!");
             Console.WriteLine("-----------------------------------");
         }
 

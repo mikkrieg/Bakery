@@ -2,6 +2,11 @@ namespace Bakery.Donut
 {
     public class Donuts
     {
-        public int DonutCost { get; set; }
+        public int DonutPrice { get; set; }
+
+        public void DonutCost(int numberOfDonuts)
+        {
+
+        }
     }
 }
