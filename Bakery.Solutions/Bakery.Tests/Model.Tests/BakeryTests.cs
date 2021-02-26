@@ -31,4 +31,17 @@ namespace Bakery.Tests
             Assert.AreEqual(shouldCost, boughtPastry.PastryPrice);
         }
     }
+
+    [TestClass]
+    public class DonutsTests
+    {
+        [TestMethod]
+        public void DonutCost_SetsPriceOFDonut_Int()
+        {
+            int donutAmount = 12;
+            int shouldCost = 10;
+            Donuts boughDonuts = new Donuts();
+            Assert.AreEqual(shouldCost, boughDonuts.DonutPrice);
+        }
+    }
 }
