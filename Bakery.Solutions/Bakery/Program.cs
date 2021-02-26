@@ -17,10 +17,15 @@ namespace Bakery
 
         public void Greeting()
         {
+            Console.WriteLine("----------------------------------");
             Console.WriteLine("Hello! Welcome to Mikey's Bakery! We have loaves of bread and pastries for sale!");
+            Console.WriteLine("----------------------------------");
             Console.WriteLine("Today we have some specials deals!");
+            Console.WriteLine("----------------------------------");
             Console.WriteLine("Buy two loaves of bread and get one free! We also offer 3 pastries for $5");
+            Console.WriteLine("----------------------------------");
             Console.WriteLine("Single Loaves are $5 each and single pastries are $2 each!");
+            Console.WriteLine("-----------------------------------");
         }
 
         public int CallBreadCost()
@@ -29,6 +34,7 @@ namespace Bakery
             Console.WriteLine("How many loaves of bread would you like?");
             int loavesOfBread = int.Parse(Console.ReadLine());
             Console.WriteLine("Sounds Good! " + loavesOfBread + " loaves of bread inbound!");
+            Console.WriteLine("------------------------");
             bread.BreadCost(loavesOfBread);
             int totalBreadCost = bread.BreadPrice;
             return totalBreadCost;
@@ -41,6 +47,7 @@ namespace Bakery
             Console.WriteLine("How many pastries would you like?");
             int pastryAmount = int.Parse(Console.ReadLine());
             Console.WriteLine("Great! " + pastryAmount + " pastries coming right up!");
+            Console.WriteLine("------------------------");
             pastry.PastryCost(pastryAmount);
             int totalPastryCost = pastry.PastryPrice;
             return totalPastryCost;
@@ -48,7 +55,11 @@ namespace Bakery
 
         public void OutputPrice(int totalBread, int totalPastry)
         {
-            Console.WriteLine("Your total will be: $" + ( totalBread + totalPastry));
+            Console.WriteLine("Your total will be:" );
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("$" + ( totalBread + totalPastry));
+            Console.ResetColor();
+            Console.WriteLine("------------------------");
             Console.WriteLine("Thank you for your purchase!");
         }
     }
