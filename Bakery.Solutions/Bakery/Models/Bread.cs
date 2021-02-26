@@ -2,7 +2,7 @@ namespace Bakery.Bread
 {
     public class Loaves
     {
-        public int BreadPrice {get; set;}
+        public int BreadPrice { get; set; }
 
         public void BreadCost(int numberOfLoaves)
         {
