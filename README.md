@@ -23,6 +23,9 @@ _This is a program that prompts a user to enter how many loaves of bread, pastri
 * _Navigate to the Bakery.Tests directory_
 * _Enter "dotnet restore" in the console_
     * To run a test enter command "dotnet test" from the Bakery.Test directory
+* _Create a .gitignore file in the Bakery.Solutions directory_
+* _Add obj and bin to this file_
+    * _You can also add obj and bin to your global .gitignore instead of creating a file_
 * _Navigate to the Bakery directory_
 * _Enter "dotnet run" in the console to run the program_
 
