@@ -22,6 +22,7 @@ _This is a program that prompts a user to enter how many loaves of bread, pastri
 * _Navigate to downloaded directory_
 * _Navigate to the Bakery.Tests directory_
 * _Enter "dotnet restore" in the console_
+    * To run a test enter command "dotnet test" from the Bakery.Test directory
 * _Navigate to the Bakery directory_
 * _Enter "dotnet run" in the console to run the program_
 
