@@ -10,13 +10,14 @@ namespace Bakery
         public static void Main()
         {
             Program myBakery = new Program();
-            myBakery.Greeting();
+            Program.Greeting();
             int costOfBread = myBakery.CallBreadCost();
             int costOfPastries = myBakery.CallPastryCost();
-            myBakery.OutputPrice(costOfBread, costOfPastries);
+            int costOfDonuts = myBakery.CallDonutCost();
+            Program.OutputPrice(costOfBread, costOfPastries, costOfDonuts);
         }
 
-        public void Greeting()
+        public static void Greeting()
         {
             Console.WriteLine("----------------------------------");
             Console.WriteLine("Hello! Welcome to Mikey's Bakery! We have loaves of bread, pastries and Donuts for sale!");
@@ -55,14 +56,26 @@ namespace Bakery
             return totalPastryCost;
         }
 
-        public void OutputPrice(int totalBread, int totalPastry)
+        public int CallDonutCost()
+        {
+            Donuts donut = new Donuts();
+            Console.WriteLine("How many donuts would you like?");
+            int donutAmount = int.Parse(Console.ReadLine());
+            Console.WriteLine("Great! " + donutAmount + " donuts are ready for you to take home!");
+            Console.WriteLine("------------------------");
+            donut.DonutCost(donutAmount);
+            int totalDonutCost = donut.DonutPrice;
+            return totalDonutCost;
+        }
+
+        public static void OutputPrice(int totalBread, int totalPastry, int totalDonuts)
         {
             Console.WriteLine("Your total will be:" );
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("$" + ( totalBread + totalPastry));
+            Console.WriteLine("$" + ( totalBread + totalPastry + totalDonuts));
             Console.ResetColor();
             Console.WriteLine("------------------------");
-            Console.WriteLine("Thank you for your purchase!");
+            Console.WriteLine("Thank you for your purchase, have a great rest of your day!");
         }
     }
 }

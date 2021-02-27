@@ -13,7 +13,7 @@
 
 ## Description
 
-_This is a program that prompts a user to enter how many loaves of bread they would like to purchase and how many pastries they would like as well. Once the user enters the amount of items they would like the program will provide them with the total cost for their items and thank them. At this bakery there are some special deals going on. Buy two loaves, get one free and by three pastries, get the third half off. The program generates an output based on these deals so that customers don't miss out!_
+_This is a program that prompts a user to enter how many loaves of bread, pastries and donuts that they would like to purchase. Once the user enters the amount of items they would like the program will provide them with the total cost for their items and thank them. At this bakery there are some special deals going on. Buy two loaves, get one free. Buy three pastries, get the third half off. Buy a dozen donuts for only ten dollars. The program generates an output based on these deals so that customers don't miss out!_
 
 ## Setup/Installation Requirements
 
