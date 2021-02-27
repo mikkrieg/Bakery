@@ -3,7 +3,6 @@ namespace Bakery.Pastry
     public class Pastries
     {
         public int PastryPrice { get; set; }
-
         public void PastryCost(int numberOfPastries)
         {
             if(numberOfPastries >= 3)

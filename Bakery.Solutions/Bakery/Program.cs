@@ -16,11 +16,10 @@ namespace Bakery
             int costOfDonuts = myBakery.CallDonutCost();
             Program.OutputPrice(costOfBread, costOfPastries, costOfDonuts);
         }
-
         public static void Greeting()
         {
             Console.WriteLine("----------------------------------");
-            Console.WriteLine("Hello! Welcome to Mikey's Bakery! We have loaves of bread, pastries and Donuts for sale!");
+            Console.WriteLine("Hello! Welcome to Mikey's Bakery! We have loaves of bread, pastries and donuts for sale!");
             Console.WriteLine("----------------------------------");
             Console.WriteLine("Today we have some specials deals!");
             Console.WriteLine("----------------------------------");
@@ -30,7 +29,6 @@ namespace Bakery
             Console.WriteLine("Single Loaves are $5 each, single donuts and pastries are $2!");
             Console.WriteLine("-----------------------------------");
         }
-
         public int CallBreadCost()
         {
             Loaves bread = new Loaves();
@@ -41,9 +39,7 @@ namespace Bakery
             bread.BreadCost(loavesOfBread);
             int totalBreadCost = bread.BreadPrice;
             return totalBreadCost;
-            
         }
-
         public int CallPastryCost()
         {
             Pastries pastry = new Pastries();
@@ -55,7 +51,6 @@ namespace Bakery
             int totalPastryCost = pastry.PastryPrice;
             return totalPastryCost;
         }
-
         public int CallDonutCost()
         {
             Donuts donut = new Donuts();
@@ -67,7 +62,6 @@ namespace Bakery
             int totalDonutCost = donut.DonutPrice;
             return totalDonutCost;
         }
-
         public static void OutputPrice(int totalBread, int totalPastry, int totalDonuts)
         {
             Console.WriteLine("Your total will be:" );
