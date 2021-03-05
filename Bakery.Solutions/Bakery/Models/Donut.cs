@@ -1,6 +1,6 @@
 namespace Bakery.Models
 {
-    public class Donuts
+    public class Donut
     {
         public int DonutPrice { get; set; }
         public void DonutCost(int numberOfDonuts)

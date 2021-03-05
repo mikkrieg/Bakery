@@ -1,7 +1,5 @@
 using System;
-using Bakery.Bread;
-using Bakery.Pastry;
-using Bakery.Donut;
+using Bakery.Models;
 
 namespace Bakery
 {
@@ -31,7 +29,7 @@ namespace Bakery
         }
         public int CallBreadCost()
         {
-            Loaves bread = new Loaves();
+            Bread bread = new Bread();
             Console.WriteLine("How many loaves of bread would you like?");
             int loavesOfBread = int.Parse(Console.ReadLine());
             Console.WriteLine("Sounds Good! " + loavesOfBread + " loaves of bread inbound!");
@@ -42,7 +40,7 @@ namespace Bakery
         }
         public int CallPastryCost()
         {
-            Pastries pastry = new Pastries();
+            Pastry pastry = new Pastry();
             Console.WriteLine("How many pastries would you like?");
             int pastryAmount = int.Parse(Console.ReadLine());
             Console.WriteLine("Great! " + pastryAmount + " pastries coming right up!");
@@ -53,7 +51,7 @@ namespace Bakery
         }
         public int CallDonutCost()
         {
-            Donuts donut = new Donuts();
+            Donut donut = new Donut();
             Console.WriteLine("How many donuts would you like?");
             int donutAmount = int.Parse(Console.ReadLine());
             Console.WriteLine("Great! " + donutAmount + " donuts are ready for you to take home!");
