@@ -1,4 +1,4 @@
-namespace Bakery.Donut
+namespace Bakery.Models
 {
     public class Donuts
     {

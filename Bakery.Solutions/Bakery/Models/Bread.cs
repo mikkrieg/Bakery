@@ -1,4 +1,4 @@
-namespace Bakery.Bread
+namespace Bakery.Models
 {
     public class Loaves
     {
