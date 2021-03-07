@@ -7,12 +7,11 @@ namespace Bakery
     {
         public static void Main()
         {
-            Program myBakery = new Program();
-            Program.Greeting();
-            int costOfBread = myBakery.CallBreadCost();
-            int costOfPastries = myBakery.CallPastryCost();
-            int costOfDonuts = myBakery.CallDonutCost();
-            Program.OutputPrice(costOfBread, costOfPastries, costOfDonuts);
+            Greeting();
+            int costOfBread = CallBreadCost();
+            int costOfPastries = CallPastryCost();
+            int costOfDonuts = CallDonutCost();
+            OutputPrice(costOfBread, costOfPastries, costOfDonuts);
         }
         public static void Greeting()
         {
@@ -27,18 +26,27 @@ namespace Bakery
             Console.WriteLine("Single Loaves are $5 each, single donuts and pastries are $2!");
             Console.WriteLine("-----------------------------------");
         }
-        public int CallBreadCost()
+        public static int CallBreadCost()
         {
             Bread bread = new Bread();
             Console.WriteLine("How many loaves of bread would you like?");
             int loavesOfBread = int.Parse(Console.ReadLine());
-            Console.WriteLine("Sounds Good! " + loavesOfBread + " loaves of bread inbound!");
+            if(loavesOfBread % 2 == 0)
+            {
+                Console.WriteLine("Sounds Good! " + (loavesOfBread + (loavesOfBread / 2)) + " loaves of bread inbound!");
+            }
+            else if(loavesOfBread % 2 > 0)
+            {
+                decimal loaves = (loavesOfBread / 2);
+                Console.WriteLine("Sounds Good! " + (loavesOfBread + Math.Floor(loaves)) + " loaves of bread inbound!");
+            }
             Console.WriteLine("------------------------");
             bread.BreadCost(loavesOfBread);
             int totalBreadCost = bread.BreadPrice;
             return totalBreadCost;
         }
-        public int CallPastryCost()
+
+        public static int CallPastryCost()
         {
             Pastry pastry = new Pastry();
             Console.WriteLine("How many pastries would you like?");
@@ -49,7 +57,8 @@ namespace Bakery
             int totalPastryCost = pastry.PastryPrice;
             return totalPastryCost;
         }
-        public int CallDonutCost()
+
+        public static int CallDonutCost()
         {
             Donut donut = new Donut();
             Console.WriteLine("How many donuts would you like?");
@@ -60,6 +69,7 @@ namespace Bakery
             int totalDonutCost = donut.DonutPrice;
             return totalDonutCost;
         }
+
         public static void OutputPrice(int totalBread, int totalPastry, int totalDonuts)
         {
             Console.WriteLine("Your total will be:" );
