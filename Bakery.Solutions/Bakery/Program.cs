@@ -31,14 +31,13 @@ namespace Bakery
             Bread bread = new Bread();
             Console.WriteLine("How many loaves of bread would you like?");
             int loavesOfBread = int.Parse(Console.ReadLine());
-            if(loavesOfBread % 2 == 0)
+            if(loavesOfBread == 1)
             {
-                Console.WriteLine("Sounds Good! " + (loavesOfBread + (loavesOfBread / 2)) + " loaves of bread inbound!");
+                Console.WriteLine("Sounds Good! " + loavesOfBread + " loaf coming right up!");
             }
-            else if(loavesOfBread % 2 > 0)
+            else 
             {
-                decimal loaves = (loavesOfBread / 2);
-                Console.WriteLine("Sounds Good! " + (loavesOfBread + Math.Floor(loaves)) + " loaves of bread inbound!");
+                Console.WriteLine("Sounds Good! " + loavesOfBread + " loaves of bread inbound!");
             }
             Console.WriteLine("------------------------");
             bread.BreadCost(loavesOfBread);
@@ -51,7 +50,14 @@ namespace Bakery
             Pastry pastry = new Pastry();
             Console.WriteLine("How many pastries would you like?");
             int pastryAmount = int.Parse(Console.ReadLine());
-            Console.WriteLine("Great! " + pastryAmount + " pastries coming right up!");
+            if(pastryAmount == 1)
+            {
+                Console.WriteLine("Great! " + pastryAmount + " pastry coming right up!");
+            }
+            else 
+            {
+                Console.WriteLine("Great! " + pastryAmount + " pastries coming right up!");
+            }
             Console.WriteLine("------------------------");
             pastry.PastryCost(pastryAmount);
             int totalPastryCost = pastry.PastryPrice;
@@ -63,13 +69,20 @@ namespace Bakery
             Donut donut = new Donut();
             Console.WriteLine("How many donuts would you like?");
             int donutAmount = int.Parse(Console.ReadLine());
-            Console.WriteLine("Great! " + donutAmount + " donuts are ready for you to take home!");
+            if(donutAmount == 1)
+            {
+                Console.WriteLine("Great! " + donutAmount + " donut is ready for you!");
+            }
+            else
+            {
+                Console.WriteLine("Great! " + donutAmount + " donuts are ready for you to take home!");
+            }
             Console.WriteLine("------------------------");
             donut.DonutCost(donutAmount);
             int totalDonutCost = donut.DonutPrice;
             return totalDonutCost;
         }
-
+        
         public static void OutputPrice(int totalBread, int totalPastry, int totalDonuts)
         {
             Console.WriteLine("Your total will be:" );
